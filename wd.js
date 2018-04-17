@@ -52,8 +52,10 @@ function add() {
 function initApp() {
 
     firebase.auth().onAuthStateChanged(function (user) {
-
+        document.getElementById("login_div").style.display = "none";
         if (user) {
+
+            document.getElementById("login_div").style.display = "block";
             // All datas
             // User is signed in.
             const displayName = user.displayName;
